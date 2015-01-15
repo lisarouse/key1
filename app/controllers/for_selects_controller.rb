@@ -4,7 +4,11 @@ class ForSelectsController < ApplicationController
   # GET /for_selects
   # GET /for_selects.json
   def index
-    @for_selects = ForSelect.all
+    @q = ForSelect.search(params[:q])
+    @for_selects = @q.result.page(params[:page]).per(5)
+
+    @totNumber = ForSelect.all.count
+    @searchNumber = @q.result.count
   end
 
   # GET /for_selects/1
@@ -15,10 +19,12 @@ class ForSelectsController < ApplicationController
   # GET /for_selects/new
   def new
     @for_select = ForSelect.new
+    @grouped_options = ForSelect.GroupedSelect('9999', 'facility', ForSelect)
   end
 
   # GET /for_selects/1/edit
   def edit
+    @grouped_options = ForSelect.GroupedSelect('9999', 'facility', ForSelect)
   end
 
   # POST /for_selects
@@ -57,6 +63,7 @@ class ForSelectsController < ApplicationController
     @for_select.destroy
     respond_to do |format|
       format.html { redirect_to for_selects_url }
+      format.js {}
       format.json { head :no_content }
     end
   end
