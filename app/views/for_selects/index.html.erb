@@ -1,9 +1,9 @@
 <div class="row">
-  <div class="large-5 columns large-offset-3">
-    <h3>Listing for_selects</h3>
+  <div class="large-5 columns large-offset-3 ">
+      <h3>Listing for_selects</h3>
   </div>
-</div>
 
+</div>
 <div class="row">
   <div class="large-9 columns">
     <div class="panel radius">
@@ -12,7 +12,7 @@
         <div class="row collapse">
           <div class="hide">
             <div class="small-2 columns">
-              <%f.submit class: 'button tiny radius' %>
+              <%= f.submit class: 'button tiny radius' %>
             </div>
           </div>
           <div class="small-12 columns">
@@ -21,49 +21,52 @@
                 <%= f.label(:code_start, 'Code:', class: "right inline") %>
               </div>
               <div class="small-2 columns end">
-                <% f.search_field :code_start %>
+                <%= f.search_field :code_start %>
               </div>
+
               <div class="small-2 columns">
                 <%= f.label(:facility_eq, 'Facility:', class: "right inline") %>
               </div>
               <div class="small-2 left columns">
-                <% f.search_field :facility_eq %>
-              </div>
+                <%= f.search_field :facility_eq %>
+              </div> 
+
               <div class="small-2 columns">
                 <%= f.label(:value_start, 'Value:', class: "right inline") %>
               </div>
               <div class="small-2 left columns">
-                <% f.search_field :value_start %>
-              </div>
-            </div>
+                <%= f.search_field :value_start %>
+              </div>   
+            </div> 
 
             <div class="row collapse">
               <div class="small-1 columns">
                 <%= f.label(:text_start, 'Text:', class: "right inline") %>
               </div>
               <div class="small-2 left columns">
-                <% f.search_field :text_start %>
-              </div>
+                <%= f.search_field :text_start %>
+              </div> 
               <div class="small-2 columns">
                 <%= f.label(:grouper_start, 'Grouper:', class: "right inline") %>
               </div>
               <div class="small-2 left columns">
-                <% f.search_field :grouper_start %>
-              </div>
+                <%= f.search_field :grouper_start %>
+              </div> 
+
               <div class="small-2 columns">
                 <%= f.label(:option_order_eq, 'Order:', class: "right inline") %>
               </div>
               <div class="small-2 left columns">
-                <% f.search_field :option_order_eq %>
-              </div>
-            </div>
+                <%= f.search_field :option_order_eq %>
+              </div> 
+            </div>           
           </div>
-        </div>
+        </div>         
         <% end %>
       </div>
 
       <div class="row">
-        <div class="small-12 small-offset-1 columns">
+        <div class="small-12 small-offset-1 columns ">
           <table>
             <thead>
               <tr class="tableHeader">
@@ -90,7 +93,7 @@
                   <td><%= for_select.facility %></td>
                   <td><%= link_to 'Show', for_select %></td>
                   <td><%= link_to 'Edit', edit_for_select_path(for_select) %></td>
-                  <td><%= link_to 'Destroy', for_select, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                  <td><%= link_to 'Destroy', for_select, method: :delete, data: { confirm: 'Are you sure?' }  %></td>
                 </tr>
               <% end %>
               <tr>
@@ -98,16 +101,21 @@
                   <%= paginate @for_selects %>
                 </td>
                 <td colspan="4" class="tableFooter">
-                  <% @searchNumber %> from <%= @totNumber %>
+                  <%= @searchNumber %> from <%= @totNumber %>
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
+        
       </div>
+
+
     </div>
+    
   </div>
 </div>
+
 
 <br>
 
