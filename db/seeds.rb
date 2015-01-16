@@ -16,3 +16,8 @@ ForSelect.create!(facility: '9999', code: 'key', value: '0014', text: 'Lowes', o
 ForSelect.create!(facility: '9999', code: 'key', value: '0015', text: 'Home Depot', option_order: 9, grouper: 'ME')
 ForSelect.create!(facility: '9999', code: 'key', value: '0016', text: 'Barnes and Noble', option_order: 10, grouper: 'ME')
 ForSelect.create!(facility: '9999', code: 'key', value: '9999', text: 'All', option_order: 26, grouper: '')
+
+ForSelect.create!(facility: '0001', code: 'building', value: 'ITS Office', text: 'Inner Office', option_order: 1, grouper: '')
+ForSelect.create!(facility: '0001', code: 'building', value: 'ITS Office', text: 'Setup Room', option_order: 2, grouper: '')
+ForSelect.create!(facility: '0001', code: 'building', value: 'Personnel', text: 'Director Office', option_order: 3, grouper: '')
+ForSelect.create!(facility: '0001', code: 'building', value: 'Personnel', text: 'Assistant Office', option_order: 4, grouper: '')
