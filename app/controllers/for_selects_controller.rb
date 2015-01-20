@@ -19,12 +19,12 @@ class ForSelectsController < ApplicationController
   # GET /for_selects/new
   def new
     @for_select = ForSelect.new
-    @grouped_options = ForSelect.GroupedSelect('9999', 'facility', ForSelect)
+    @grouped_options = ForSelect.GroupedSelect('9999', 'key', ForSelect)
   end
 
   # GET /for_selects/1/edit
   def edit
-    @grouped_options = ForSelect.GroupedSelect('9999', 'facility', ForSelect)
+    @grouped_options = ForSelect.GroupedSelect('9999', 'key', ForSelect)
   end
 
   # POST /for_selects
